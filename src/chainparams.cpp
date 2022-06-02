@@ -179,7 +179,7 @@ public:
 
      
 		
-	vSeeds.push_back(CDNSSeedData("104.250.127.59","104.250.127.59"));
+		vSeeds.push_back(CDNSSeedData("188.212.125.4","93.115.21.13"));
 
 		
 
