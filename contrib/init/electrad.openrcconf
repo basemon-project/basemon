@@ -1,0 +1,26 @@
+# /etc/conf.d/basemond: config file for /etc/init.d/basemond
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/basemon/basemon.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/basemond"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/basemond.pid"
+
+# Where to write basemond data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/basemond"
+
+# User and group to own basemond process
+#BITCOIND_USER="basemon"
+#BITCOIND_GROUP="basemon"
+
+# Path to basemond executable
+#BITCOIND_BIN="/usr/bin/basemond"
+
+# Nice value to run basemond under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,26 @@
+[Unit]
+Description=basemon's distributed currency daemon
+After=network.target
+
+[Service]
+User=basemon
+Group=basemon
+
+Type=forking
+PIDFile=/var/lib/basemond/basemond.pid
+
+ExecStart=/usr/bin/basemond -daemon -pid=/var/lib/basemond/basemond.pid \
+          -conf=/etc/basemon/basemon.conf -datadir=/var/lib/basemond
+
+ExecStop=-/usr/bin/basemon-cli -conf=/etc/basemon/basemon.conf \
+         -datadir=/var/lib/basemond stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
